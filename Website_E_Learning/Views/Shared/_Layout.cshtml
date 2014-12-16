@@ -67,7 +67,7 @@
         <link rel="canonical" href="http://sdedsynergy.org/">
         <link rel="shortlink" href="http://sdedsynergy.org/">
         <!-- <meta name="NextGEN" version="2.0.66.33" /> -->
-
+        @RenderSection("StyleCss", required: false)
         <script type="text/javascript" src="//cdn.syndication.twimg.com/widgets/timelines/516714598292930560?&amp;lang=en&amp;callback=twitterFetcher.callback&amp;suppress_response_codes=true&amp;rnd=0.1541113017592579"></script>
         <style data-c2c="c2c_print_container_style" media="print" type="text/css">
             span.skype_c2c_print_container {
@@ -116,10 +116,11 @@
                             </ul>
                         </li>
                         <li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-125 dropdown">
-                            <a title="The Couser" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Couser <span class="caret"></span></a>
+                            <a title="Courses" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Courses <span class="caret"></span></a>
                             <ul role="menu" class=" dropdown-menu">
-                                <li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a title="Linked Learning" href="http://sdedsynergy.org/the-work/linked-learning/">Popular Couser</a></li>
-                                <li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a title="P-3" href="http://sdedsynergy.org/the-work/p-3/">Software Develope</a></li>
+                                <li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a title="Linked Learning" href="@Url.Action("Index", "Courses")">All Courses</a></li>
+                                <li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a title="Linked Learning" href="http://sdedsynergy.org/the-work/linked-learning/">Information Technology</a></li>
+                                <li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a title="P-3" href="http://sdedsynergy.org/the-work/p-3/">Economic</a></li>
                             </ul>
                         </li>
                         <li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a title="Get Involved" href="http://sdedsynergy.org/get-involved/">Get Involved</a></li>

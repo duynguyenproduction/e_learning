@@ -3,34 +3,42 @@
     ViewBag.Title = "Register";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
-
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
-
-    <fieldset>
-        <legend>Registration Form</legend>
-        <ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
-            </li>
-        </ol>
-        <input type="submit" value="Register" />
-    </fieldset>
-}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-8 col-md-offset-2">
+            <div class="content">
+                <div class="page-title">Log In</div>
+                <div class="content-area">
+                    <main class="site-main">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <p>
+                                @Html.ValidationSummary(true, "", new { @style = "color: red;" })
+                            </p>
+                            <fieldset>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.UserName)
+                                    @Html.TextBoxFor(m => m.UserName, new { @placeholder = "Enter username", @class = "form-control", @required = "true", @autofocus = "true" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password)
+                                    @Html.PasswordFor(m => m.Password, new { @placeholder = "Enter password", @class = "form-control", @required = "true" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.ConfirmPassword)
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @placeholder = "Confirm password", @class = "form-control", @required = "true"})
+                                </div>
+                                <input type="submit" value="Register" class="btn btn-lg btn-primary btn-block" />
+                            </fieldset>
+                            
+                        }
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
